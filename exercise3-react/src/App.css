@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  height: 100vh;
+  padding-top: 10px;
+  background-color: #1b1b32;
+  font-family: Lato, sans-serif;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.Container-C{
+  width: 400px;
+  height: 600px;
+  padding: 14px;
+  background-color: #99c9ff;
+  border-radius: 20px;
+  border: 5px solid white;
+}
+.row{
+  margin: 4px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+/** Display **/
+.input{
+  height: 75px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: black;
   color: white;
+  padding: 11px;
+  padding-right: 30px;
+  margin: 1px solid #888;
+  border: 3px solid white;
 }
-
-.App-link {
-  color: #61dafb;
+/** Buttons **/
+.button-c{
+  height: 83px;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 38px;
+  background-color: #1b1b32;
+  color: white;
+  border-radius: 25px;
+  border: 2px solid white;
+  margin: 4px;
+  cursor: pointer;
+  user-select: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-clear{
+  height: 80px;
+  font-size: 1.6em;
+  display: flex;
+  flex: 1;
+  background-color: #ac0246;
+  margin-top: 8px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 45px;
+}
+.button-clear:hover{
+  background-color: #ebb000;
+}
+.math{
+  background-color: #00471b;
+}
+.button-c:hover{
+  background-color: #5a01a7;
+}
+.math:hover{
+  background-color: #ff6600;
 }
