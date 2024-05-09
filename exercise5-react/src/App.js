@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import Values from 'values.js'
 import './App.css';
+import { useState } from 'react';
+import FormColor from './components/FormColor';
+import DisplayColors from './components/DisplayColors';
 
 function App() {
+  const [list, setList]=useState(new Values('red').all(10));
+  console.log(list);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <FormColor setList={setList}/>
+        <DisplayColors list={list}/>
     </div>
   );
 }

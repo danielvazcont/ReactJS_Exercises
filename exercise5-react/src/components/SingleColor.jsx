@@ -1,0 +1,30 @@
+import React, { useState } from 'react'
+import Clip from '../img/clipTransparent.png'
+const SingleColor = ({hexColor}) => {
+
+  const [copy, setCopy]= useState(false);
+
+  const hanldeCopy = (color) => () =>{
+    const colorNew= `#${color}`;
+    navigator.clipboard.writeText(colorNew);
+    setCopy(true);
+    setTimeout(() => {
+      setCopy(false);
+    }, 2000);
+  }
+  return (
+    <div className="single-card" style={{backgroundColor:`#${hexColor}`}}>
+        <div className="content">
+            <p>#{hexColor}</p>
+            <button onClick={hanldeCopy(hexColor)}>
+              <img src={Clip} alt="copy"/>
+            </button>
+        </div>
+
+        { copy ? <p className="copy-alert">Copied  to Clipboard</p> : null}
+
+    </div>
+  )
+}
+
+export default SingleColor
